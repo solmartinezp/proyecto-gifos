@@ -2,6 +2,7 @@ let divModal= document.getElementById('modal');
 let closeBtn= document.getElementById('close-btn');
 let gifExpandido= document.getElementsByClassName('gifExpandido')[0];
 let tituloGif= document.getElementsByClassName('nombreGif')[0];
+let userGif= document.getElementsByClassName('userGif')[0];
 let iconsGif= document.getElementsByClassName('masExpandido-icons');
 let downloadOnly= document.getElementsByClassName('onlyDownload');
 let downloadA= document.getElementById('download-target');
@@ -15,9 +16,11 @@ async function expandir(event, id) {
     let nombre= json.data.title;
     let idParaFav= id;
     let sourceGif= json.data.images.original.url;
+    let user= json.data.username;
     gifExpandido.setAttribute('src', sourceGif);
     gifExpandido.style.display= "inline-block";
     tituloGif.innerHTML= nombre;
+    userGif.innerHTML= user;
     
     let chequearSiEsTrending= event.target;
     let favA= document.getElementById('a-target');
