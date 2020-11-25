@@ -142,7 +142,6 @@ function mostrarResultados(offset) {
                         if (window.screen.width < 900) {
                             containerImg.setAttribute('onclick', 'expandir(event,"' + j.data[x].id + '")');
                         } else {
-                            console.log('chauchis')
                         //Agregar hover
                         let divHover= document.createElement('div');
                             let txt="<div class='icons-hover'><img id='imagen"+[x]+"' class='icons-gif' onclick='agregando("+ 'event,"' + j.data[x].id + '"' +")' src='img/desktop/DAY/icons/icon-fav.svg' alt='Icon Fav'/>" + 
@@ -153,7 +152,6 @@ function mostrarResultados(offset) {
                             divHover.innerHTML= txt;
                             divHover.classList.add("hoverContentS");
                             containerImg.appendChild(divHover);
-                            console.log('creo el coso');
                         }
                 }
                     
@@ -176,7 +174,6 @@ function mostrarResultados(offset) {
                 .catch(e=> {
                     console.log(e);
                     resultContainer.innerHTML= "";
-                    console.log('no encuentro nada');
                     searchSinContenido.style.display= "flex";
                     resultContainer.classList.remove('resultadosActivos');
                     containerSearch.innerHTML= "";

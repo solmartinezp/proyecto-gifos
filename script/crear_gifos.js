@@ -135,7 +135,6 @@ function empezarGrabacion() {
   botonFinalizar.style.display="inline-block";
 
   recorder.startRecording();
-  console.log('empezamos');
 }
 
 botonFinalizar.addEventListener('click', finalizarGrabacion);
@@ -158,7 +157,6 @@ function finalizarGrabacion () {
     form.append("api_key", api_key);
     
     console.log(form.get('file'))
-    console.log('paramos');
     resetTimer();
   });
 }
@@ -210,7 +208,6 @@ function subirGif() {
       return resp.json();
     })
     .then((j) => {
-      console.log(j.data);
       let gifoId = j.data.id;
 
       //Nuevo gif creado
@@ -248,7 +245,6 @@ function downloadGifCreado (id) {
   fetch(url_download)
     .then(r=> r.json())
     .then(j=> {
-      console.log(j.data);
       let src= j.data.images.original.url;
       downloadGif(src);
     })

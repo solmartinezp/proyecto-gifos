@@ -19,7 +19,6 @@ function cargarPaginaGifos() {
         gifosArrayLleno.filter((x) => {
             filtradoGifos.push(x.match(myRegex).join(''));
         });
-        console.log(filtradoGifos);
         mostrarGifos(0, 12);
     }
 }
@@ -51,7 +50,6 @@ function mostrarGifos (offset, limit) {
         botonesPagina.classList.add('active');
         let offsetOriginal= 0;
         let cantidadDePag= Math.ceil(lengthId/12);
-        console.log(cantidadDePag);
                 
         if (lengthId > 12) {
             for(let y=1; y<cantidadDePag; y++) {
@@ -85,12 +83,10 @@ function mostrarGifos (offset, limit) {
 
         //Cuando son mas de 12 gifs dibujo con un for hasta 12.
         if (lengthId-offSet > 12) {
-            //dibujeeee
             for (let x= 0; x<12; x++) {
-                console.log('dibujandooo hasta 12!!!!!! :)')
-                names= j.data[x].title; //j.data.title;
-                id_gif=  j.data[x].id; //filtrado[x]; 
-                src= j.data[x].images.original.url; //j.data.images.original.url;
+                names= j.data[x].title;
+                id_gif=  j.data[x].id; 
+                src= j.data[x].images.original.url; 
                 user= j.data[x].username;
 
                 let gifoContainer= document.createElement('div');
@@ -119,9 +115,9 @@ function mostrarGifos (offset, limit) {
         } else {
             //dibujo desde el valor pasado hasta el length del array de IDs
                 for (let x= offSet; x<lengthId; x++) {
-                    names= j.data[x].title; //j.data.title;
-                    id_gif=  j.data[x].id; //filtrado[x]; 
-                    src= j.data[x].images.original.url; //j.data.images.original.url;
+                    names= j.data[x].title; 
+                    id_gif=  j.data[x].id; 
+                    src= j.data[x].images.original.url; 
                     user= j.data[x].username;
 
                     let gifoContainer= document.createElement('div');
@@ -152,70 +148,6 @@ function mostrarGifos (offset, limit) {
     .catch(err=> console.log(err));
 
 }
-
-
-    // if (!botonesPagina.classList.contains('active')) {  
-    //     botonesPagina.classList.add('active');
-    //     botonesPagina.style.display= "flex";
-    //     let offsetOriginal= 0;
-    //     let cantidadDePag= filtradoGifos.length/12;
-    //     if (cantidadDePag<1) {
-    //         console.log('solo 1 pagina, mostrá solo 12 gifs');
-    //     } else {
-    //        for(let y=1; y<cantidadDePag; y++) {
-    //                 offsetOriginal += 12;
-    //                 let boton= document.createElement('button');
-    //                 boton.setAttribute('id', 'pagina'+(y+1));
-    //                 boton.classList.add('boton');
-    //                 boton.setAttribute('onclick', 'mostrarFav('+offsetOriginal+', 24)');
-    //                 boton.innerHTML= (y+1);
-    //                 botonesPagina.appendChild(boton);             
-    //              }       
-    //         }
-    //     }
-    //         let limite;
-    //         if (filtradoGifos.length < limit) {
-    //             limite= filtradoGifos.length;
-    //         } else {
-    //             limite= limit;
-    //         }
-
-    //         for (let x=offset; x<limite; x++) {               
-           
-    //         .then(r=> r.json())
-    //         .then(j=> {
-    //             console.log(j.data);
-    //             user= j.data.username;
-    //             names= j.data.title;
-    //             id_gif= filtradoGifos[x];
-    //             src= j.data.images.original.url;
-    //             user= j.data.username;
-
-
-    //             let gifoContainer= document.createElement('div');
-    //             gifoContainer.classList.add('gifoContainer');
-    //             let giph= document.createElement('img');
-    //             giph.classList.add('foto-s2');
-    //             giph.setAttribute('src', src);
-    //             misGifosSection.appendChild(gifoContainer);
-    //             gifoContainer.appendChild(giph);   
-
-    //             //AGREGAR HOVER
-    //             let divHover= document.createElement('div');
-    //             let txt="<div class='icons-hover'><img class='icons-gifos' onclick='eliminarGifo("+ 'event,"' + id_gif + '"' +")' src='img/desktop/DAY/icons/icon-trash-normal.svg' alt='Icon Fav'/>" + 
-    //                             "<img class='icons-gifos' onclick='downloadGif("+ '"' + src + '"' +")' src='img/desktop/DAY/icons/icon-download.svg' alt='Icon Fav'/>" +
-    //                             "<img class='icons-gifos' onclick='expandir("+ 'event,"' + id_gif + '"' +")' src='img/desktop/DAY/icons/icon-max-normal.svg' alt='Icon Fav'/></div>" +
-    //                             "<div class='text-hover'> <h3>"+user+"</h3>" +
-    //                             "<h2>"+names+"</h2></div>";
-    //             divHover.innerHTML= txt;
-    //             divHover.classList.add("hoverContent");
-    //             gifoContainer.appendChild(divHover);   
-    //             })
-    //         .catch(err=> console.log(err));
-    //     }  
-                
-    
-// }
 
 function eliminarGifo (evento, id) {
     let gifosLleno= localStorage.getItem('gifCreados');

@@ -34,10 +34,6 @@ function mostrarFav (offset, limit) {
         filtrado.push(x.match(myRegex).join(''));
     });
        
-        //Tengo que hacer un string con todos los IDs sin "" ni [];
-        //Le paso ese ID al URL de fetch muchos IDs
-        //`https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${array}`;
-
         let idMas= JSON.parse(favALleno);
        
         let url_id= `https://api.giphy.com/v1/gifs?api_key=${api_key}&ids=${idMas}`;
@@ -54,7 +50,6 @@ function mostrarFav (offset, limit) {
                 botonesPagina.classList.add('active');
                 let offsetOriginal= 0;
                 let cantidadDePag= Math.ceil(lengthId/12);
-                console.log(cantidadDePag);
                         
                 if (lengthId > 12) {
                     for(let y=1; y<cantidadDePag; y++) {
@@ -88,12 +83,10 @@ function mostrarFav (offset, limit) {
 
          //Cuando son mas de 12 gifs dibujo con un for hasta 12.
         if (lengthId-offSet > 12) {
-                //dibujeeee
                 for (let x= 0; x<12; x++) {
-                    console.log('dibujandooo hasta 12!!!!!! :)')
-                    names= j.data[x].title; //j.data.title;
-                    id_gif=  j.data[x].id; //filtrado[x]; 
-                    src= j.data[x].images.original.url; //j.data.images.original.url;
+                    names= j.data[x].title; 
+                    id_gif=  j.data[x].id; 
+                    src= j.data[x].images.original.url; 
                     user= j.data[x].username;
 
 
@@ -124,9 +117,9 @@ function mostrarFav (offset, limit) {
         } else {
             //dibujo desde el valor pasado hasta el length del array de IDs
                 for (let x= offSet; x<lengthId; x++) {
-                    names= j.data[x].title; //j.data.title;
-                    id_gif=  j.data[x].id; //filtrado[x]; 
-                    src= j.data[x].images.original.url; //j.data.images.original.url;
+                    names= j.data[x].title;
+                    id_gif=  j.data[x].id; 
+                    src= j.data[x].images.original.url; 
                     user= j.data[x].username;
 
                     let favContainer= document.createElement('div');
@@ -155,8 +148,7 @@ function mostrarFav (offset, limit) {
         }
 
         })
-            .catch(err=> console.log(err));
-        // }  
+            .catch(err=> console.log(err));  
                 
     
 }

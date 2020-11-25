@@ -5,7 +5,6 @@ let slider2= document.getElementById('slider2');
 let trending_gif= document.getElementById('trending-gif');
 
 function getTrendings(limit, offset) { 
-    console.log('probando');
     let url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=${limit}&offset=${offset}`; 
     fetch (url_trending)
         .then ( r => {
@@ -56,7 +55,6 @@ function getTrendings(limit, offset) {
                     divHover.innerHTML= txt;
                     divHover.classList.add("hoverContent");
                     containerImg.appendChild(divHover);
-                    console.log('me termine de dibujar');
             }
         }
         })
@@ -77,14 +75,12 @@ function moverSlides(num){
     var cantidad=index+=num;
     if (cantidad>=0){
         trending_gif.innerHTML= "";
-        console.log(cantidad);
         getTrendings(3, cantidad);
    }  
 }
 
 
 function agregando(event, id) {
-    console.log('agregando gif');
     //CAMBIAR EL ICON CUANDO ESTA MARCADO COMO FAVORITO
     let elementFav= event.target; 
 
@@ -109,7 +105,6 @@ function agregando(event, id) {
     }
     let repetidoIdFav= favArray.includes(id);
        if (repetidoIdFav) {
-        console.log('ya ta');
         let nuevoArr= favArray.filter((x)=> x != id);
         favArray= nuevoArr;
        } else {

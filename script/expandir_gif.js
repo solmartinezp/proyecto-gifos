@@ -20,7 +20,6 @@ async function expandir(event, id) {
     tituloGif.innerHTML= nombre;
     
     let chequearSiEsTrending= event.target;
-    // let favA= iconsGif[0].firstElementChild;
     let favA= document.getElementById('a-target');
     let imgTarget= favA.firstElementChild;
     if (chequearSiEsTrending.classList.contains('icons-gifos')) { //Si el gif está en la sección de Mis Gifos
@@ -80,7 +79,6 @@ async function expandir(event, id) {
             }
             let repetidoIdFav= favArr.includes(id);
             if (repetidoIdFav) {
-                console.log('ya ta');
                 let nuevoArr= favArr.filter((x)=> x != id);
                 favArr= nuevoArr;
 
