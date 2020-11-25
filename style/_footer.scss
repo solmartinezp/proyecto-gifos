@@ -1,0 +1,37 @@
+//INDEX
+
+footer {
+    grid-area: footer;
+    border-bottom: 5px solid $violeta;
+    .social-media {
+        h3 {
+            font-family: $secondFont;
+            font-size: 15px;
+            color: #000000;
+            letter-spacing: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .icons-footer {
+            width: 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px auto;
+            i {
+                color: $icon-gray;
+            }
+        }
+    }
+    .bottom {
+        font-size: 14px;
+        color: #000000;
+        letter-spacing: 0;
+        line-height: 20px;
+        font-family: $secondFont;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

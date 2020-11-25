@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <title>Crear Gifos</title>
+</head>
+<body onload="cargar()">
+    <header>
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="img/mobile/DAY/c-logo-mobile.svg" alt="Logo"/></a>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="checkbox-button" class="checkbox-button"/>
+            <label for="checkbox-button" class="label-icon">
+                <span class="span-icon"></span>
+            </label>
+            <ul class="menu">
+                <li><a href="#" id="cambiaModo">Modo Nocturno</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="mis_gifos.html">Mis GIFOS</a></li>
+                <li><a class="create" href="#"><img src="img/desktop/DAY/button-crear-gifo.svg" alt="Crear Gif"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="crear">
+        <div class="icon-camara">
+            <img src="img/desktop/DAY/camara.svg" alt="Camara"/>
+            <img src="img/desktop/DAY/element-luz-camara.svg" alt="Luz"/>
+        </div>
+        <div class="main-crear">
+            <div class="cuadrado">
+                <div class="marco uno"></div>
+                <div class="marco dos"></div>
+                <div class="marco tres"></div>
+                <div class="marco cuatro"></div>
+                <div class="main">
+                    <div id="empezando-a-grabar">
+                        <video id="video"></video>
+                        <img id="previewGif" src="undefined" alt="Gif Creado"/>
+                        <div id="gifOverlay">
+                            <img id="imgOverlay" src="img/desktop/DAY/loader.svg" alt="Icon Upload"/>
+                            <h2 id="textOverlay">Estamos subiendo tu GIFO</h2>
+                        </div>
+                    </div>
+                    
+                    <div id="sin-grabar">
+                        <h1 class="title">Aquí podrás </h1>
+                        <h1 class="title">crear tus propios <span class="gifos-span">GIFOS</span></h1>
+                        <h3 >¡Crea tu GIFO en sólo 3 pasos!</h3>
+                        <h3>(sólo necesitas una cámara para grabar un video)</h3>
+                    </div>
+                    
+                </div>
+            </div>
+                <div class="footer-crear">
+                    <div class="numeros">
+                        <a href="" id="paso-1">1</a>
+                        <a href="" id="paso-2">2</a>
+                        <a href="" id="paso-3">3</a>
+                        <div id="timer"></div>
+                        <button id="repetir">REPETIR CAPTURA</button>
+                    </div>
+                    <div class="barra"></div>
+                    <button id="botonParaComenzar" class="boton">COMENZAR</button>
+                    <button id="botonParaGrabar" class="boton">GRABAR</button>
+                    <button id="botonParaFinalizar" class="boton">FINALIZAR</button>
+                    <button id="botonParaSubir" class="boton">SUBIR GIFO</button>
+            </div>
+        </div>
+
+        <div class="icon-pelicula">
+            <img src="img/desktop/DAY/pelicula.svg" alt="Pelicula">
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="social-media">
+            <h3>Compartir en:</h3>
+            <div class="icons-footer">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <h3>© GIFOS 2020 All Rights Reserved.</h3>
+        </div>
+
+
+    </footer>
+    <script src='script/cambia-modo.js'></script>
+    <script src='script/download_gif.js'></script>
+    <script src='script/crear_gifos.js'></script>
+</body>
+</html>

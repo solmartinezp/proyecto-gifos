@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <title>Favoritos</title>
+</head>
+<body onload="cargarPagina()">
+    <header>
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="img/mobile/DAY/c-logo-mobile.svg" alt="Logo"/></a>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="checkbox-button" class="checkbox-button"/>
+            <label for="checkbox-button" class="label-icon">
+                <span class="span-icon"></span>
+            </label>
+            <ul class="menu">
+                <li><a href="#" id="cambiaModo">Modo Nocturno</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="mis_gifos.html">Mis GIFOS</a></li>
+                <li><a class="create" href="crear_gifos.html"><img src="img/desktop/DAY/button-crear-gifo.svg" alt="Crear Gif"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="favoritos">
+        <img src='img/mobile/icon-favoritos.svg' alt='Favoritos'/>
+        <h1 class="title">Favoritos</h1>
+
+        <div id="favoritos-section"></div>
+        <div class="botones-pagina" id="botones-pagina">
+            <button id="pagina1" class="boton" onclick="mostrarFav(0, 12)">1</button>
+        </div>
+
+        <div class="principal_sin_contenido" id="principal_sin_contenido">
+            <img src="img/mobile/icon-fav-sin-contenido.svg" alt="Sin contenido"/>
+            <h2>
+                "¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"
+            </h2>
+        </div>
+    </section>
+
+    <section class="section-two">
+        <article class="trending-two">
+            <h1 class="title">Trending GIFOS</h1>
+            <h3>Mira los últimos GIFOS de nuestra comunidad.</h3>
+
+           <div class="slider-and-gifs">
+            <img class="slider" id="slider1" src="img/desktop/DAY/Button-Slider-left.svg" alt="Slider" onclick="moverSlides(-3)"/>
+            <div class="trending-gif" id="trending-gif">
+            </div>
+            <img class="slider" id="slider2" src="img/desktop/DAY/button-slider-right.svg" alt="Slider" onclick="moverSlides(3)"/>
+        </div> 
+        </article>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <h3>Compartir en:</h3>
+            <div class="icons-footer">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <h3>© GIFOS 2020 All Rights Reserved.</h3>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="centralDivExpand">
+            <button class="close-btn" id="close-btn"><img src="img/desktop/DAY/close.svg" alt="Close"/></button>
+            <img class="gifExpandido" src="img" alt="Gif"/>
+            <div class="masExpandido">
+                <div class="masExpandido-texto">
+                    <h3>User</h3>
+                    <h2 class="nombreGif">Titulo GIFO</h2>
+                </div> 
+                <div class="masExpandido-icons">
+                    <a href="" id="a-target" class='icons-gif fav'>
+                        <img class='favImg' src='img/desktop/DAY/icons/icon-fav.svg' alt='Icon Fav'/>
+                    </a>
+                    <a href="" id="download-target" class='icons-gif'>
+                        <img class="dwnld" src='img/desktop/DAY/icons/icon-download.svg' alt='Icon Fav'/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='script/cambia-modo.js'></script>
+    <script src='script/trending_gifs.js'></script>
+    <script src='script/download_gif.js'></script>
+    <script src='script/expandir_gif.js'></script>
+    <script src='script/save_fav.js'></script>
+    
+</body>
+</html>

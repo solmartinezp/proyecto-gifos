@@ -1,0 +1,182 @@
+//INDEX
+
+.section-one {
+    grid-area: section-one;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    .title {
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 500px;
+        font-family: $myFont;
+        font-weight: bold;
+        font-size: 25px;
+        color: $violeta;
+        text-align: center;
+        line-height: 33px; 
+    }
+    .div-foto {
+        width: 75%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .foto-s1 {
+            width: 280px;
+        }
+    }
+    .section-one-div {
+        width: 90%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        max-width: 400px;
+        border: 1px solid $violeta;
+        border-radius: 20px; 
+    }
+    .div-search {
+        height: 40px;
+        width: inherit; 
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-between;   
+        input {
+            width: 90%;
+            border: none;
+            text-align: center;
+            border-radius: 10px;
+            font-family: $secondFont;
+            font-size: 16px;
+            color: #000000;
+            text-align: left;
+            margin-left: 20px;
+            order: 2;
+        }
+        i{
+            display: none;
+            color: #9CAFC3;
+            order: 1;
+        }
+        input:focus{
+            outline: none;
+        }
+        input:focus ~ i {
+            display: inline;
+        }
+
+        #search-button {
+            order: 3;
+            border: none;
+            cursor:pointer;
+            padding: 0 15px;
+            display: inline-block;
+        }
+        #delete-button {
+            display: none;
+            order: 3;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+    
+    .botones-pagina {
+        display: none;
+        width: 20%;
+        justify-content: space-around;
+        .boton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $myFont;
+            color: $violeta;
+            font-weight: bold;
+            border-radius: 30px;
+            border: 1px solid $violeta;
+            padding: 15px;
+            height: 30px;
+            width: 30px;
+            font-size: 13px;
+            letter-spacing: 0;
+            text-align: center;
+        }
+        .boton:hover {
+            color: white;
+            background: $violeta;
+            cursor: pointer;
+        }
+        .boton:focus {
+            outline: unset;
+        }
+    }
+}
+
+.gifos-span {
+    color: $celeste;
+}
+
+#container-search {
+    position: relative;
+    width: inherit;
+    font-family: $secondFont;
+    color: #9CAFC3;
+    li { 
+        cursor: pointer;
+    }
+    .icon-div {
+        display: flex;
+        padding: 10px 0;
+        margin-bottom: 5px;       
+    i {
+        width: 5%;
+        margin-right: 15px;
+    }
+}
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .foto-s2 {
+        position: absolute;
+        width: 100%;
+        min-width:100px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: unset;
+    }
+    .containerSearchImg{
+        position: relative;
+        min-width: 250px;
+        max-width: 300px;
+        height: 200px;
+        margin: 10px;   
+    }
+}
+#search-sin-contenido {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-size: 20px;
+        color: $celeste_fav;
+        text-align: center;
+        line-height: 33px;
+        font-family: $myFont;
+        font-weight: bold;
+        padding: 0 40px;
+        margin-bottom: 100px;
+        max-width: 470px;
+    }
+}

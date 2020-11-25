@@ -1,0 +1,82 @@
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.centralDivExpand {
+    padding: 10px;
+    min-width: 300px;
+    width: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn {
+    align-self: flex-end;
+    border: unset;
+    cursor: pointer;
+    margin-bottom: 10%;
+}
+
+.close-btn:focus {
+    outline: none;
+}
+
+.gifExpandido {
+    width: 70%;
+}
+
+.masExpandido {
+    margin-top: 30px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.masExpandido-icons {
+    display: flex;
+    flex-direction: row;
+    .icons-gif {
+        .active {
+            width: 30px;
+            margin-top:5px;
+        }
+        img {
+            width: 40px;
+            cursor: pointer;
+        }
+    }
+    .favImg:hover:not(.active){
+        content: url('../img/desktop/DAY/icons/icon-fav-hover.svg');
+    }
+    .dwnld:hover {
+        content:url('../img/desktop/DAY/icons/icon-download-hover.svg');
+    }
+    .onlyDownload:hover {
+        content:url('../img/desktop/DAY/icons/icon-download-hover.svg');
+    }
+}
+
+.masExpandido-texto {
+    font-family: $secondFont;
+    h3 {
+        font-size: 15px;
+        font-weight: lighter;
+    }
+    h2{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+}

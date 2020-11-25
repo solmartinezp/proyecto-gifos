@@ -1,0 +1,489 @@
+@media only screen and (min-width: 900px) {
+    body {     
+        header {
+            display: flex;
+            flex-direction: row;
+            .logo {
+                margin-left:100px;
+            }
+        nav {
+            flex-direction: row;
+            background-color: white;
+            height: 95px;
+            position: relative;
+            .label-icon {
+                display: none;
+            }
+            .span-icon {
+                display: none;
+            }
+            .menu {
+                min-height: 95px;
+                margin-right: 40px;
+                flex-direction: row;
+                background: white;
+                justify-content: flex-end;
+                li { 
+                    padding: 0 30px;
+                    a {  
+                        position: relative;
+                        color: $violeta;
+                        font-weight: bold;
+                        text-transform: uppercase; 
+                        display: flex;
+                        height: 30px;
+                        align-items: center;
+                    }
+                    a {
+                        img {
+                        display: inline-block;
+                        width: 50px;
+                        border-bottom: none;
+                    }
+                    
+                }
+                
+                }
+                
+                a:hover{
+                    border-bottom: 2px solid $celeste;     
+                } 
+                .create:hover{
+                    border-bottom: transparent;
+                }
+                .create:hover img {
+                    content: url('../img/desktop/DAY/CTA-crear-gifo-hover.svg');
+                }
+                .create:active img {
+                    content: url('../img/desktop/DAY/CTA-crear-gifo-active.svg');
+                }
+                a:active {
+                    color: $text-gray;
+                    border-bottom: transparent;
+                }
+                
+            }
+        }
+    }
+
+    //FAVORITOS 
+
+    .favoritos {
+        #favoritos-section {
+            flex-direction: row;
+
+        .favContainer{
+                position: relative;
+                min-width: 250px;
+                max-width: 300px;
+                height: 200px;
+                margin: 10px;
+        }
+        
+        .favContainer:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left:0;
+            transition: .2s linear;
+            opacity: 0;
+            background-color:rgba(86, 46, 229, 0.7);
+            cursor: pointer;
+        }
+
+        .favContainer:hover:after {
+            opacity: 1;
+        }
+
+        .favContainer .active {
+            width: 34px;
+            background-color:rgb(201, 196, 234);
+            padding: 6px;
+            border-radius: 10px;
+        }
+
+        .active:hover {
+            content: unset;
+        }
+
+        .hoverContentF {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+            .icons-hover{
+                display: flex;
+                justify-content: flex-end;
+                margin: 10px;
+                img {
+                    margin-left: 5px;
+                }
+                img:nth-of-type(1):hover:not(.active):not(.elementoActivo):not(.icons-gifos){
+                    content: url('../img/desktop/DAY/icons/icon-fav-hover.svg');
+                }
+                img:nth-of-type(2):hover {
+                    content:url('../img/desktop/DAY/icons/icon-download-hover.svg');
+                }
+                img:nth-of-type(3):hover {
+                    content:url('../img/desktop/DAY/icons/icon-max-hover.svg');
+                }
+                .elementoActivo {
+                    width: 34px;
+                    background-color:rgb(201, 196, 234);
+                    padding: 6px;
+                    border-radius: 10px;
+                }
+                .text-hover {
+                    color: white;
+                    font-family: $secondFont;
+                    font-weight: bolder;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    text-align: left;
+                    margin: 95px 10px 0px;
+                    h3 {
+                        font-weight: lighter;
+                        margin-bottom: 4px;
+                    }
+                    
+                }
+            }
+        }
+
+        .favContainer:hover .hoverContentF{
+            display: block;
+            cursor: pointer;
+          }
+        }
+        
+     }
+     // FIN FAVORITOS
+
+    //MIS GIFOS
+    .gifos {
+        #misgifos_section {
+            flex-direction: row;
+            .gifoContainer{
+                position: relative;
+                min-width: 250px;
+                max-width: 300px;
+                height: 200px;
+                margin: 10px;
+            }
+
+            .gifoContainer:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left:0;
+                transition: .2s linear;
+                opacity: 0;
+                background-color:rgba(86, 46, 229, 0.7);
+                cursor: pointer;
+            }
+    
+            .gifoContainer:hover:after {
+                opacity: 1;
+            }
+    
+            .icons-gifos:nth-of-type(1):hover {
+                content: url('../img/desktop/DAY/icons/icon-trash-hover.svg');
+                cursor: pointer;
+            }
+    
+            .gifoContainer:hover .hoverContent{
+                display: block;
+                cursor: pointer;
+              }
+    }
+    }
+
+    //FIN MIS GIFOS 
+
+    .section-one {
+        margin-top: 60px;
+        #result-container {
+            flex-direction: row;
+            position: relative;
+            .title {
+                width: 100%;
+                position: absolute;
+                top: 0;
+            }
+            .containerSearchImg {
+                margin-top: 50px;
+                clear: both;
+            }
+            .containerSearchImg .hoverContentS { 
+                    position: absolute;
+                    z-index: 10;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    display: none;
+                    .text-hover {
+                        color: white;
+                        font-family: $secondFont;
+                        font-weight: bolder;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        text-align: left;
+                        margin: 95px 10px 0px;
+                        h3 {
+                            font-weight: lighter;
+                            margin-bottom: 4px;
+                        }
+                    }
+            .icons-hover{
+                display: flex;
+                justify-content: flex-end;
+                margin: 10px;
+                img {
+                    margin-left: 5px;
+                }
+                img:nth-of-type(1):hover:not(.elementoActivo):not(.icons-gifos){
+                    content: url('../img/desktop/DAY/icons/icon-fav-hover.svg');
+                }
+                img:nth-of-type(2):hover {
+                    content:url('../img/desktop/DAY/icons/icon-download-hover.svg');
+                }
+                img:nth-of-type(3):hover {
+                    content:url('../img/desktop/DAY/icons/icon-max-hover.svg');
+                }
+                .elementoActivo {
+                    width: 34px;
+                    background-color:rgb(201, 196, 234);
+                    padding: 6px;
+                    border-radius: 10px;
+                }
+               
+            }
+
+        }
+            .containerSearchImg:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left:0;
+                transition: .2s linear;
+                opacity: 0;
+                background-color:rgba(86, 46, 229, 0.7);
+                cursor: pointer;
+            }
+        
+            .containerSearchImg:hover:after {
+                opacity: 1;
+            }
+        
+            .containerSearchImg .active img:first-of-type {
+                width: 34px;
+                background-color:rgb(201, 196, 234);
+                padding: 6px;
+                border-radius: 10px;
+            }
+        
+            .containerSearchImg:hover .hoverContentS{
+                display: block;
+                cursor: pointer;
+              }
+        }
+    
+    
+      
+}
+
+    .section-two {
+        .trending-two { 
+            .containerImg:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left:0;
+                transition: .2s linear;
+                opacity: 0;
+                background-color:rgba(86, 46, 229, 0.7);
+                cursor: pointer;
+            }
+
+            .containerImg:hover:after {
+                opacity: 1;
+            }
+
+            .containerImg:hover .hoverContent{
+                    display: block;
+                    cursor: pointer;
+                  }  
+                
+                .hoverContent {
+                    position: absolute;
+                    z-index: 10;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    display: none;
+                    .icons-hover{
+                        display: flex;
+                        justify-content: flex-end;
+                        margin: 10px;
+                        img {
+                            margin-left: 5px;
+                        }
+                        img:nth-of-type(1):hover:not(.elementoActivo):not(.icons-gifos){
+                            content: url('../img/desktop/DAY/icons/icon-fav-hover.svg');
+                        }
+                        img:nth-of-type(2):hover {
+                            content:url('../img/desktop/DAY/icons/icon-download-hover.svg');
+                        }
+                        img:nth-of-type(3):hover {
+                            content:url('../img/desktop/DAY/icons/icon-max-hover.svg');
+                        }
+                        .elementoActivo {
+                            width: 34px;
+                            background-color:rgb(201, 196, 234);
+                            padding: 6px;
+                            border-radius: 10px;
+                        }
+                        .text-hover {
+                            color: white;
+                            font-family: $secondFont;
+                            font-weight: bolder;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            text-align: left;
+                            margin: 96px 10px 0px;
+                            h3 {
+                                font-weight: lighter;
+                                margin-bottom: 4px;
+                            }
+                        }
+                    }
+                }
+
+            //termina hover
+            .slider-and-gifs {
+                justify-content: center;
+            }
+            #trending-gif {
+                width: 900px; 
+                overflow-x: unset;
+                justify-content: center;
+            }
+            .trending-gif::-webkit-scrollbar {
+                display: none;
+            }
+            
+            #slider1 {
+                display: inline;
+                cursor: pointer;
+            }
+
+            #slider2 {
+                display: inline;
+                cursor: pointer;
+            }
+
+            #slider1:hover{
+                content: url("../img/desktop/DAY/button-slider-left-hover.svg");
+            }
+            #slider2:hover{
+                content: url("../img/desktop/DAY/button-slider-right-hover.svg");
+            }
+
+        }
+    }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            .social-media {
+                width: 30%;
+                margin-left: 100px;
+                display: flex;
+                flex-direction: row;
+                .icons-footer {
+                    margin: 0;
+                    align-items: unset;
+                    i:hover {
+                        color: $violeta;
+                    }
+                }
+            }
+            .bottom {
+                margin-right: 100px;
+                font-weight: bold;
+            }
+        }
+
+
+
+}
+.modoNoche {
+        header { 
+            nav{
+            background-color: $background-noc;
+            .menu {
+                background-color: $background-noc;
+                li {
+                    a {
+                        color: white;
+                        border: none;
+                        img {
+                            content: url('../img/desktop/NIGHT/CTA-crear-gifo-modo-noc.svg');
+                        }
+                    }
+                    a:hover{
+                        border-bottom: 2px solid $celeste;     
+                    } 
+                    .create:hover img{
+                        content: url('../img/desktop/NIGHT/CTA-crear-gifo-hover-modo-noc.svg');
+                    }
+                    .create:hover {
+                        border-bottom: transparent;
+                    }
+                    .create:active img {
+                        content: url('../img/desktop/NIGHT/CTA-crear-gifo-active-modo-noc.svg');
+                    }
+                    a:active {
+                        color: $text-gray;
+                        border-bottom: transparent;
+                    }
+
+                }
+            }
+        }
+    }
+
+    #slider1 {
+        content: url('../img/desktop/NIGHT/button-slider-left-md-noct.svg');
+        
+    }
+
+    #slider2 {
+        content: url('../img/desktop/NIGHT/button-slider-right-md-noct.svg');
+    }
+
+}
+
+}

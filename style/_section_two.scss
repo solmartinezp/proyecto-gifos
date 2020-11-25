@@ -1,0 +1,118 @@
+//INDEX
+
+.section-two {
+    grid-area: section-two;
+    text-align: center;
+    margin-bottom: 60px;
+    overflow-y: hidden;
+    .trending-one {
+        margin-bottom: 60px;
+        h2{
+            font-size: 16px;
+            color: $violeta;
+            text-align: center;
+            line-height: 25px;
+            font-family: $myFont;
+            font-weight: bold;
+        }
+        h3{
+            font-family: $myFont;
+            font-size: 14px;
+            color: $violeta;
+            text-align: center;
+            line-height: 25px;
+            width: 70%;
+            margin: 0 auto;
+        }
+        #trending-terms {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            h3 {
+                width: fit-content;
+                margin: unset;
+                padding: unset;
+                margin-left: 10px;
+            }
+            h3:first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .trending-two {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            font-family: $secondFont;
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            line-height: 23px;
+            font-weight: 500;
+            width: 70%;
+            margin-bottom: 30px;
+        }
+        .slider-and-gifs {
+            display:flex;
+            width: 90%;
+
+        }
+
+        #trending-gif {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            position: relative;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            
+            .foto-s2 {
+                position: absolute;
+                width: 100%;
+                min-width:100px;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            .containerImg {
+                position: relative;
+                min-width: 250px;
+                height: 200px;
+                margin:0 10px 0 10px;
+                overflow: hidden;
+            }   
+    }
+}
+
+
+.title {
+    font-family: $myFont;
+    font-weight: bold;
+    font-size: 20px;
+    color: $violeta;
+    text-align: center;
+    line-height: 30px;
+}
+
+.text-hover {
+    color: white;
+    font-family: $secondFont;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    margin: 96px 10px 0px;
+}
+    
+}
+
+.section-two .trending-two .slider-and-gifs .slider {
+    display: none;
+}

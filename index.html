@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img class="logo-img" src="img/mobile/DAY/c-logo-mobile.svg" alt="Logo"/></a>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="checkbox-button" class="checkbox-button"/>
+            <label for="checkbox-button" class="label-icon">
+                <span class="span-icon"></span>
+            </label>
+            <ul class="menu">
+                <li><a href="#" id="cambiaModo">Modo Nocturno</a></li> 
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="mis_gifos.html">Mis GIFOS</a></li>
+                <li><a class="create" href="crear_gifos.html"><img src="img/desktop/DAY/button-crear-gifo.svg" alt="Crear Gif"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="section-one">
+        <h1 class= "title">Inspírate, busca, guarda, y crea los mejores <span class="gifos-span">GIFOS</span></h1>
+
+        <div class="div-foto">
+            <img class="foto-s1" src="img/mobile/ilustra_header.svg" alt="Ilustración"/> 
+        </div>
+
+        <div class="section-one-div">
+            <div class="div-search">
+                <input type="text" id="search-bar" name="search-bar" placeholder="Busca GIFOS y más"/>
+                <i class="fas fa-search"></i>
+                <img id="delete-button" class="delete-img" src="img/desktop/DAY/close.svg" alt="Delete Search"/>
+                <img id="search-button"  class="search-img" src="img/mobile/DAY/icon-search.svg"  alt="Icon Search" />
+            </div>
+            <div id="container-search"></div>
+        </div>
+        <div id="result-container" class="result-container"></div>
+            <div id="search-sin-contenido">
+                <h1 class="title">Lorem Ipsum</h1>
+                <img src="img/desktop/DAY/icon-busqueda-sin-resultado.svg" alt="Sin contenido"/>
+                <h2>Intenta con otra búsqueda.</h2>
+            </div>
+        <div class="botones-pagina" id="botones-pagina">
+            <button id="pagina1" class="boton" onclick="mostrarMas(0)">1</button>
+        </div>
+    </section>
+
+    <section class="section-two">
+        <article class="trending-one" id="trending-one">
+            <h2 class="sub-title">Trending:</h2>
+        </article>
+
+        <article class="trending-two">
+            <h1 class="title">Trending GIFOS</h1>
+            <h3>Mira los últimos GIFOS de nuestra comunidad.</h3>
+
+            <div class="slider-and-gifs">
+                <img class="slider" id="slider1" src="img/desktop/DAY/Button-Slider-left.svg" alt="Slider" onclick="moverSlides(-3)"/>
+                <div class="trending-gif" id="trending-gif"></div>
+                <img class="slider" id="slider2" src="img/desktop/DAY/button-slider-right.svg" alt="Slider" onclick="moverSlides(3)"/>
+            </div> 
+        </article>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <h3>Compartir en:</h3>
+            <div class="icons-footer">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a> <!-- COMPLETAR HREF-->
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <h3>© GIFOS 2020 All Rights Reserved.</h3>
+        </div>
+    </footer>   
+
+        <div class="modal" id="modal">
+            <div class="centralDivExpand">
+                <button class="close-btn" id="close-btn"><img src="img/desktop/DAY/close.svg" alt="Close"/></button>
+                <img class="gifExpandido" src="img" alt="Gif"/>
+                <div class="masExpandido">
+                    <div class="masExpandido-texto">
+                        <h3>User</h3>
+                        <h2 class="nombreGif">Titulo GIFO</h2>
+                    </div> 
+                    <div class="masExpandido-icons">
+                        <a href="" id="a-target" class='icons-gif fav'>
+                            <img class='favImg' src='img/desktop/DAY/icons/icon-fav.svg' alt='Icon Fav'/>
+                        </a>
+                        <a href="" id="download-target" class='icons-gif'>
+                            <img class="dwnld" src='img/desktop/DAY/icons/icon-download.svg' alt='Icon Fav'/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src='script/cambia-modo.js'></script>
+    <script src='script/trending_gifs.js'></script>
+    <script src='script/search_gif.js'></script>
+    <script src='script/download_gif.js'></script>
+    <script src='script/expandir_gif.js'></script>
+    <script src='script/trending_terms.js'></script>
+</body>
+</html>
